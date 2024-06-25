@@ -4,7 +4,6 @@ const app = express();
 const dotenv = require('dotenv');
 dotenv.config();
 
-const port = 3000;
 
 app.get('/home', (req,res) => {
     try {
@@ -14,6 +13,6 @@ app.get('/home', (req,res) => {
     }
 })
 app.listen(process.env.PORT, () => {
-    console.log(`The server is running at ${port}`);
+    console.log(`The server is running at ${process.env.PORT}`);
 })
 
